@@ -31,8 +31,13 @@ MediaPlayer.prototype.start = function () {
         this.play();
     }
 };
+
 MediaPlayer.prototype.mute = function () {
     this.video.muted = true;
+}
+
+MediaPlayer.prototype.unMute = function () {
+    this.video.muted = false;
 }
 
 export default MediaPlayer;
