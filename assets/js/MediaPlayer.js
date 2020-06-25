@@ -13,11 +13,7 @@ MediaPlayer.prototype._initPlugins = function () {
 };
 
 MediaPlayer.prototype.play = function () {
-    if (!this.video.paused) {
-        this.video.pause();
-    } else {
         this.video.play();
-    }
 };
 
 MediaPlayer.prototype.paused = function () {
@@ -26,9 +22,9 @@ MediaPlayer.prototype.paused = function () {
 
 MediaPlayer.prototype.start = function () {
     if (this.video.paused) {
-        this.play();
+        this.video.play();
     } else {
-        this.play();
+        this.paused();
     }
 };
 
