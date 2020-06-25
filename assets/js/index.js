@@ -1,6 +1,6 @@
 import MediaPlayer from "./MediaPlayer.js";
 import AutoPlay from './plugins/AutoPlay.js';
-import AutoPause from "./plugins/AutoPause.js";
+import AutoPause from "./plugins/AutoPause.ts";
 
 const videoSrc = document.querySelector('video');
 const button = document.querySelector('#play');
@@ -26,6 +26,6 @@ mute.addEventListener('click', () => {
 
 });
 
-// if ('serviceWorker' in navigator) {
-//     let serviceWorkerRegistration = navigator.serviceWorker.register('/sw.js');
-// }
+if ('serviceWorker' in navigator) {
+    let serviceWorkerRegistration = navigator.serviceWorker.register('/sw.js');
+}

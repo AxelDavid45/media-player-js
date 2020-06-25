@@ -23,7 +23,7 @@ const loadCache = async () => {
         '/assets/css/styles.css',
         '/assets/js/index.js',
         '/assets/js/MediaPlayer.js',
-        '/assets/js/plugins/AutoPause.js',
+        '/assets/js/plugins/AutoPause.ts',
         '/assets/js/plugins/AutoPlay.js'
     ]);
 
