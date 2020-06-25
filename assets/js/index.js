@@ -26,6 +26,6 @@ mute.addEventListener('click', () => {
 
 });
 
-if ('serviceWorker' in navigator) {
-    let serviceWorkerRegistration = navigator.serviceWorker.register('/sw.js');
-}
+// if ('serviceWorker' in navigator) {
+//     let serviceWorkerRegistration = navigator.serviceWorker.register('/sw.js');
+// }
