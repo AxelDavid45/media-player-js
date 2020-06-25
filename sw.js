@@ -11,6 +11,7 @@ self.addEventListener('fetch', evt => {
        return;
    }
    evt.respondWith(cachedResponse(request));
+   evt.waitUntil(updateCache(request));
 });
 
 //Caches the files needed
@@ -32,4 +33,10 @@ const cachedResponse = async (request) => {
     const cache = await caches.open(VERSION);
     const response = await cache.match(request);
     return response || fetch(request);
+};
+
+const updateCache = async (request) =>{
+    const cache = await caches.open(VERSION);
+    const response = await fetch(request)
+    return cache.put(request, response);
 };
