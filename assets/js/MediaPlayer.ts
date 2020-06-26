@@ -1,10 +1,12 @@
 class MediaPlayer {
     video: HTMLMediaElement;
     plugins: Array<any>
+
     constructor(configs) {
         this.video = configs.src;
         this.plugins = configs.plugins || [];
         this.initPlugins();
+        this.video.controls = true;
     }
 
     private initPlugins() {
