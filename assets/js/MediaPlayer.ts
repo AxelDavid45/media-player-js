@@ -1,11 +1,13 @@
 class MediaPlayer {
+    video: HTMLMediaElement;
+    plugins: Array<any>
     constructor(configs) {
         this.video = configs.src;
         this.plugins = configs.plugins || [];
-        this._initPlugins();
+        this.initPlugins();
     }
 
-    _initPlugins() {
+    private initPlugins() {
         if (this.plugins.length > 0) {
             this.plugins.forEach(plugin => {
                plugin.run(this);

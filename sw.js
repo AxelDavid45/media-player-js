@@ -18,13 +18,13 @@ self.addEventListener('fetch', evt => {
 const loadCache = async () => {
     const cache = await caches.open(VERSION);
     return cache.addAll([
-        '/',
-        '/index.html',
-        '/assets/css/styles.css',
-        '/assets/js/index.js',
-        '/assets/js/MediaPlayer.js',
-        '/assets/js/plugins/AutoPause.ts',
-        '/assets/js/plugins/AutoPlay.js'
+        // '/',
+        // '/index.html',
+        // '/assets/css/styles.css',
+        // '/assets/js/index.ts',
+        // '/assets/js/MediaPlayer.ts',
+        // '/assets/js/plugins/AutoPause.ts',
+        // '/assets/js/plugins/AutoPlay.ts'
     ]);
 
 };
