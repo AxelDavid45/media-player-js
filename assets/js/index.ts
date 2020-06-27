@@ -11,11 +11,11 @@ const configs = {src: videoSrc, plugins: [
     ]};
 const player = new MediaPlayer(configs);
 
-button.addEventListener('click', async () => {
+button.addEventListener('click', () => {
     try {
-        await player.start();
+        player.start();
     } catch (e) {
-        console.error(e);
+        console.log(e);
     }
 });
 
@@ -28,6 +28,6 @@ mute.addEventListener('click', () => {
 
 });
 
-if ('serviceWorker' in navigator) {
-    let serviceWorkerRegistration = navigator.serviceWorker.register('/sw.js');
-}
+// if ('serviceWorker' in navigator) {
+//     let serviceWorkerRegistration = navigator.serviceWorker.register('/sw.js');
+// }

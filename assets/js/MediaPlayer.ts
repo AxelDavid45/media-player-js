@@ -1,10 +1,12 @@
 class MediaPlayer {
     video: HTMLMediaElement;
     plugins: Array<any>
+    container: HTMLElement;
 
     constructor(configs) {
         this.video = configs.src;
         this.plugins = configs.plugins || [];
+        this.initPlayer();
         this.initPlugins();
         this.video.controls = true;
     }
@@ -15,6 +17,13 @@ class MediaPlayer {
                plugin.run(this);
             });
         }
+    }
+
+    private initPlayer(){
+        this.container = document.createElement('div');
+        this.video.parentNode.insertBefore(this.container, this.video);
+        this.container.appendChild(this.video);
+        this.container.style.position = 'relative'
     }
 
     play() {
